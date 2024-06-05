@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>False Alarm Detection</title>
+      <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 400px;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+        }
+
+        form {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 align="center">False Alarm Detection</h1>
+        <p align="center">Ambient Temperature , Calibration(days) , Unwanted substance deposition (0/1), Humidity (%), H2S Content(ppm),Dangerous (0/1) </p>
+        <form action="/submit" method="post">
+            <label for="at">Ambient Temperature (deg C):   </label> <input type="number" id="at" name="at" step="any">
+            <br>
+
+            <label for="cd">Calibration (days):   </label> <input type="number" id="cd" name="cd" step="any">
+            <br>
+
+            <label for="usd">Unwanted substance deposition (0(False)/1(True)):</label>
+            <br>
+            <input type="radio" id="True" name="usd" value="1">
+            <label for="True">True</label><br>
+            <input type="radio" id="False" name="usd" value="0">
+            <label for="False">False</label>
+            <br>
+
+            <label for="hm">Humidity (%):   </label>  <input type="number" id="hm" name="hm" step="any">
+            <br>
+
+            <label for="hots">H2S Content (ppm):   </label>  <input type="number" id="hots" name="hots" step="any">
+            <br>
+
+            <label for="detected">Detected by (% of sensors):   </label>  <input type="number" id="detected" name="detected" step="any"><br>
+            <br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
